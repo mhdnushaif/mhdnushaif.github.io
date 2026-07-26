@@ -372,6 +372,10 @@ h2::after {
 
 /* Mobile */
 @media (max-width: 768px) {
+    .hero-image {
+        order: -1;
+    }
+
     .hero-container {
         flex-direction: column;
         text-align: center;

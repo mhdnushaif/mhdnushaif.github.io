@@ -1,107 +1,165 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mohamed Nushaif | Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mohamed Nushaif | Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Inter:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
 
-    <header class="header">
-        <div class="logo">Portfolio</div>
-        <nav>
-            <a href="#home">Home</a>
-            <a href="#about">About</a>
-            <a href="#skills">Skills</a>
-            <a href="#projects">Projects</a>
-            <a href="#contact">Contact</a>
-        </nav>
-    </header>
+<!-- ============ NAVBAR ============ -->
+<header class="navbar" id="navbar">
+  <div class="navbar__inner container">
+    <a href="#home" class="navbar__logo">Mohamed Nushaif</a>
 
-    <section id="home" class="hero">
-        <div class="hero-container">
-            <div class="hero-text">
-                <h3>Hello, it's Me</h3>
-                <h1>Mohamed Nushaif</h1>
-                <p class="role">I'm a <span class="highlight">Full Stack Developer</span></p>
-                <p>I'm a passionate Junior Software Engineer with a strong interest in web development
-                   and software engineering. I recently completed my Higher National Diploma (HND) in
-                   Software Engineering and enjoy building responsive, user-friendly web applications.
-                   I have hands-on experience with HTML, CSS, JavaScript, PHP, Java, MySQL, and Node.js
-                   through academic and personal projects.
-                </p>
-                <div class="socials">
-                    <a href="https://github.com/mhdnushaif" target="_blank" class="icon-btn"><i class="fab fa-github"></i></a>
-                    <a href="https://www.linkedin.com/in/nushaif7" target="_blank" class="icon-btn"><i class="fab fa-linkedin"></i></a>
-                    <a href="cv.pdf" download class="btn">Download CV</a>
-                </div>
-            </div>
-            <div class="hero-image">
-                <img src="profile.jpeg" alt="Mohamed Nushaif">
-            </div>
-        </div>
-    </section>
+    <nav class="navbar__links" id="navLinks">
+      <a href="#home" class="nav-link">Home</a>
+      <a href="#about" class="nav-link">About</a>
+      <a href="#skills" class="nav-link">Skills</a>
+      <a href="#projects" class="nav-link">Projects</a>
+      <a href="#contact" class="nav-link">Contact</a>
+    </nav>
 
-    <section id="about" class="container">
-    <div class="about-grid">
-        <div class="about-image">
-            <img src="profile.jpeg" alt="Mohamed Nushaif">
-        </div>
-        <div class="about-text">
-            <h2>About <span class="highlight">Me</span></h2>
-            <h3>Full Stack Developer</h3>
-            <p>I'm Mohamed Nushaif, a Software Engineering graduate from Sri Lanka. I enjoy designing and developing web applications that solve real-world problems. I have experience building dynamic web applications using PHP, JavaScript, MySQL, Java, HTML, and CSS.</p>
-            <p>I continuously improve my skills by learning new technologies and building practical projects. My goal is to become a Full-Stack Software Engineer and contribute to innovative software solutions.</p>
-            <a href="#projects" class="btn">See Projects</a>
-        </div>
+    <div class="navbar__actions">
+      <a href="cv.pdf" download class="link-plain">Download CV</a>
+      <a href="#contact" class="btn btn--pill btn--accent">Hire Me</a>
     </div>
-</section>
 
-    <section id="skills" class="container">
-    <h2>Skills</h2>
+    <button class="navbar__burger" id="burgerBtn" aria-label="Toggle navigation menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main>
+
+  <!-- ============ HERO ============ -->
+  <section class="hero" id="home">
+    <div class="hero__glow" aria-hidden="true"></div>
+    <div class="hero__inner container">
+      <div class="hero__content">
+        <div class="badge">
+          <span class="badge-dot"></span>
+          <span>Available for Work</span>
+        </div>
+
+        <h1 class="hero__title">
+          Building <span class="text-accent">Digital</span><br>
+          Experiences.
+        </h1>
+
+        <p class="hero__subtitle">I'm a passionate Junior Software Engineer with a strong interest in web development. I have hands-on experience with HTML, CSS, JavaScript, PHP, Java, MySQL, and Node.js through academic and personal projects.</p>
+
+        <div class="hero__actions">
+          <a href="#projects" class="btn btn--accent btn--lg">
+            View Projects
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="#081b29" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+          <a href="cv.pdf" download class="btn btn--ghost btn--lg">Download CV</a>
+        </div>
+      </div>
+
+      <div class="hero__visual">
+        <div class="hero__visual-glow" aria-hidden="true"></div>
+        <div class="hero__frame">
+          <img src="profile.jpeg" alt="Mohamed Nushaif">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ ABOUT ============ -->
+  <section class="about container" id="about">
+    <div class="about__visual">
+      <div class="about__frame">
+        <div class="about__photo">
+          <img src="profile.jpeg" alt="Mohamed Nushaif">
+        </div>
+      </div>
+      <div class="about__badge">
+        <i class="fas fa-code"></i>
+      </div>
+    </div>
+
+    <div class="about__content">
+      <div>
+        <h2 class="section-title">About <span class="text-accent">Me</span></h2>
+        <p class="about__text">I'm Mohamed Nushaif, a Software Engineering graduate from Sri Lanka. I enjoy designing and developing web applications that solve real-world problems. I have experience building dynamic web applications using PHP, JavaScript, MySQL, Java, HTML, and CSS.</p>
+      </div>
+
+      <div class="about__info-grid">
+        <div class="info-card">
+          <i class="fas fa-location-dot"></i>
+          <div>
+            <div class="info-card__label">Location</div>
+            <div class="info-card__value">Colombo, Sri Lanka</div>
+          </div>
+        </div>
+        <div class="info-card">
+          <i class="fas fa-graduation-cap"></i>
+          <div>
+            <div class="info-card__label">Education</div>
+            <div class="info-card__value">HND in Software Eng.</div>
+          </div>
+        </div>
+      </div>
+
+      <blockquote class="quote-card">
+        "I continuously improve my skills by learning new technologies and building practical projects. My goal is to become a Full-Stack Software Engineer."
+      </blockquote>
+    </div>
+  </section>
+
+  <!-- ============ SKILLS ============ -->
+  <section id="skills" class="container">
+    <h2 class="section-title section-title--center">My <span class="text-accent">Skills</span></h2>
     <div class="skills-grid">
         <div class="skill-card">
             <i class="fab fa-html5"></i>
             <h3>HTML</h3>
-            <div class="skill-bar"><div class="skill-level" style="width: ___%;"></div></div>
+            <div class="skill-bar"><div class="skill-level" style="width: 90%;"></div></div>
         </div>
         <div class="skill-card">
             <i class="fab fa-css3-alt"></i>
             <h3>CSS</h3>
-            <div class="skill-bar"><div class="skill-level" style="width: ___%;"></div></div>
+            <div class="skill-bar"><div class="skill-level" style="width: 90%;"></div></div>
         </div>
         <div class="skill-card">
             <i class="fab fa-js"></i>
             <h3>JavaScript</h3>
-            <div class="skill-bar"><div class="skill-level" style="width: ___%;"></div></div>
+            <div class="skill-bar"><div class="skill-level" style="width: 90%;"></div></div>
         </div>
         <div class="skill-card">
             <i class="fab fa-php"></i>
             <h3>PHP</h3>
-            <div class="skill-bar"><div class="skill-level" style="width: ___%;"></div></div>
+            <div class="skill-bar"><div class="skill-level" style="width: 72%;"></div></div>
         </div>
         <div class="skill-card">
             <i class="fas fa-database"></i>
             <h3>MySQL</h3>
-            <div class="skill-bar"><div class="skill-level" style="width: ___%;"></div></div>
+            <div class="skill-bar"><div class="skill-level" style="width: 78%;"></div></div>
         </div>
         <div class="skill-card">
             <i class="fab fa-java"></i>
             <h3>Java</h3>
-            <div class="skill-bar"><div class="skill-level" style="width: ___%;"></div></div>
+            <div class="skill-bar"><div class="skill-level" style="width: 90%;"></div></div>
         </div>
         <div class="skill-card">
             <i class="fab fa-git-alt"></i>
             <h3>Git</h3>
-            <div class="skill-bar"><div class="skill-level" style="width: ___%;"></div></div>
+            <div class="skill-bar"><div class="skill-level" style="width: 85%;"></div></div>
         </div>
     </div>
-</section>
+  </section>
 
-    <section id="projects" class="container">
-    <h2>Projects</h2>
+  <!-- ============ PROJECTS ============ -->
+  <section id="projects" class="container">
+    <h2 class="section-title section-title--center">My <span class="text-accent">Projects</span></h2>
     <div class="projects-grid">
 
         <div class="project-card">
@@ -129,32 +187,99 @@
             <a href="https://github.com/mhdnushaif/medicare-plus" target="_blank" class="btn-small">View Project</a>
         </div>
 
-    </div>
-</section>
-
-    <section id="contact" class="container">
-        <h2>Contact</h2>
-        <div class="contact-grid">
-            <div class="contact-info">
-                <h3>Let's Work Together</h3>
-                <p>I'm currently open to junior developer roles, freelance projects, and collaboration opportunities. Feel free to get in touch — I'll get back to you as soon as possible.</p>
-                <p>Email: mohamednushaif7@gmail.com</p>
-                <div class="socials">
-                    <a href="https://github.com/mhdnushaif" target="_blank" class="icon-btn"><i class="fab fa-github"></i></a>
-                    <a href="https://www.linkedin.com/in/nushaif7" target="_blank" class="icon-btn"><i class="fab fa-linkedin"></i></a>
-                </div>
+        <div class="project-card">
+            <div class="project-icon"><i class="fas fa-hotel"></i></div>
+            <h3>LuxeVista Resort</h3>
+            <p>A mobile application that enables users to explore luxury accommodations, browse resort facilities, and book rooms with ease. Includes secure authentication, room listings, booking management, and user profiles.</p>
+            <div class="tech-tags">
+                <span>Android</span>
+                <span>Java</span>
+                <span>Firebase</span>
             </div>
-
-            <form class="contact-form" action="https://formspree.io/f/mlgqojre" method="POST">
-                <input type="text" name="name" placeholder="Enter Your Name" required>
-                <input type="email" name="email" placeholder="Enter Your Email" required>
-                <input type="text" name="subject" placeholder="Enter Your Subject" required>
-                <textarea name="message" placeholder="Enter Your Message" rows="5" required></textarea>
-                <button type="submit" class="btn">Submit</button>
-            </form>
+            <a href="https://github.com/mhdnushaif/LuxeVistaResort" target="_blank" class="btn-small">View Project</a>
         </div>
-    </section>
 
-    <script src="script.js"></script>
+    </div>
+  </section>
+
+  <!-- ============ CONTACT ============ -->
+  <section class="contact container" id="contact">
+    <div class="contact__info">
+      <div>
+        <h2 class="section-title">Let's <span class="text-accent">Connect</span></h2>
+        <p class="about__text">I'm currently open to junior developer roles, freelance projects, and collaboration opportunities. Feel free to get in touch — I'll get back to you as soon as possible.</p>
+      </div>
+
+      <div class="contact__list">
+        <div class="contact__item">
+          <span class="contact__icon-wrap"><i class="fas fa-envelope"></i></span>
+          <div>
+            <div class="contact__label">Email Me</div>
+            <div class="contact__value">mohamednushaif7@gmail.com</div>
+          </div>
+        </div>
+        <div class="contact__item">
+          <span class="contact__icon-wrap"><i class="fas fa-location-dot"></i></span>
+          <div>
+            <div class="contact__label">Location</div>
+            <div class="contact__value">Colombo, Sri Lanka</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="contact__socials">
+        <a href="https://github.com/mhdnushaif" target="_blank" class="social-btn" aria-label="GitHub"><i class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/nushaif7" target="_blank" class="social-btn" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+      </div>
+    </div>
+
+    <div class="contact__form-wrap">
+      <div class="contact__form-glow" aria-hidden="true"></div>
+      <form class="contact-form" id="contactForm" action="https://formspree.io/f/mlgqojre" method="POST">
+        <div class="contact-form__row">
+          <div class="form-field">
+            <label for="fullName">Full Name</label>
+            <input type="text" id="fullName" name="name" placeholder="John Doe" required>
+          </div>
+          <div class="form-field">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="john@example.com" required>
+          </div>
+        </div>
+        <div class="form-field">
+          <label for="subject">Subject</label>
+          <input type="text" id="subject" name="subject" placeholder="Project Discussion">
+        </div>
+        <div class="form-field">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="4" placeholder="Tell me about your project..." required></textarea>
+        </div>
+        <button type="submit" class="btn btn--accent btn--full">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <div class="footer__inner container">
+    <div class="footer__brand">
+      <div class="footer__name text-accent">Mohamed Nushaif</div>
+      <div class="footer__copy">© 2026 Mohamed Nushaif. Built with precision.</div>
+    </div>
+    <div class="footer__links">
+      <a href="https://github.com/mhdnushaif" class="link-plain" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://www.linkedin.com/in/nushaif7" class="link-plain" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+  </div>
+</footer>
+
+<!-- ============ BACK TO TOP ============ -->
+<button class="back-to-top" id="backToTop" aria-label="Back to top">
+  <i class="fas fa-arrow-up"></i>
+</button>
+
+<script src="script.js"></script>
 </body>
 </html>
